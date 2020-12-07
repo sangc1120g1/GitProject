@@ -1,0 +1,18 @@
+.info tr{
+    color: blue;font-size: 20px;
+}
+.l{
+    text-align: left;border: 0px;
+}
+.r{
+    text-align: right;border: 0px;
+}
+table{
+    border-collapse: collapse;
+}
+td,th{
+    border: black solid 1px;padding: 10px;
+}
+th{
+    background-color: yellow;
+}

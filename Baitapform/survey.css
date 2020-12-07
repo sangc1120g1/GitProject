@@ -1,0 +1,9 @@
+form{
+    padding: 6px 1% 9px 1%;
+}
+input{
+    margin: 3px 5px 0px 5px;
+}
+table,th,td{
+    border: 1px solid black; border-collapse: collapse;background-color: #f2ecec;
+}
