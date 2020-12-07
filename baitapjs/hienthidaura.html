@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="vcl();">Bấm vào</button>
+<script>
+    function vcl(){
+    document.write('xin chào');}
+</script>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+    function showMessage(){
+        document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+    }
+</script>
+</body>
+</html>
