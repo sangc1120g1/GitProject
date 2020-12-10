@@ -1,0 +1,16 @@
+th{
+    border: black solid 1px;
+}
+input{
+    width: 400px; height: 80px;font-size: 55px;
+}
+button{
+    width: 96px;
+    height: 90px;
+}
+table{
+    width: 411px;
+}
+form{
+    font-size: 55px;
+}

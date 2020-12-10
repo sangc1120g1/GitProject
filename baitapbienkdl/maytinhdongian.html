@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+    <link rel="stylesheet" href="maytinh.css">
+</head>
+<body>
+     <center><form name="name">
+         <input type="text" id="ip" class="if" value="" name="in">
+         <table>
+             <tr>
+                 <th><button type="button" value="number" onclick="showing('(')" class="onu1">(</button>
+                 </th>
+                 <th><button type="button" value="number" onclick="showing(')')" class="onu1">)</button>
+                 </th>
+              <th><button id="%" type="button" value="number" onclick="percent('%')" class="onu1">%</button>
+              </th>
+                 <th><button type="button" value="number" onclick="xoa('AC')" class="onu1">AC</button>
+              </th>
+             </tr>
+             <tr>
+                 <th><button type="button" value="number" onclick="showing('7')" class="onu1">7</button>
+                 </th>
+                 <th><button type="button" value="number" onclick="showing('8')" class="onu1">8</button>
+                 </th>
+                 <th><button type="button" value="number" onclick="showing('9')" class="onu1">9</button>
+                 </th>
+                 <th><button type="button" value="number" onclick="showing('/')" class="onu1" id="chia">/</button>
+                 </th>
+             </tr>
+             <tr>
+                 <th><button type="button" value="number" onclick="showing('4')" class="onu1">4</button></th>
+                 <th><button type="button" value="number" onclick="showing('5')" class="onu1">5</button></th>
+                 <th><button type="button" value="number" onclick="showing('6')" class="onu1">6</button></th>
+                 <th><button type="button" value="number" onclick="showing('*')" class="onu1">*</button></th>
+             </tr>
+             <tr>
+                 <th><button type="button" value="number" onclick="showing('1')" class="onu1">1</button></th>
+                 <th><button type="button" value="number" onclick="showing('2')" class="onu1">2</button></th>
+                 <th><button type="button" value="number" onclick="showing('3')" class="onu1">3</button></th>
+                 <th><button type="button" value="number" onclick="showing('-')" class="onu1">-</button></th>
+             </tr>
+             <tr>
+                 <th><button type="button" value="number" onclick="showing('0')" class="onu1" >0</button></th>
+                 <th><button type="button" value="number" onclick="showing('.')" class="onu1">.</button></th>
+                 <th style="color: blue"><button type="button" value="number" onclick="bang()" class="onu1">=</button>
+                 </th>
+                 <th><button type="button" id="cong" value="number" onclick="showing('+')" class="onu1">+</button></th>
+             </tr>
+         </table>
+     </form></center>
+<script src="maytinh.js"></script>
+</body>
+</html>

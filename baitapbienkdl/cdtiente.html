@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+   <form>
+       <table>
+           <tr>
+               <th>Amonut</th>
+               <th>From</th>
+               <th>To</th>
+           </tr>
+           <tr>
+               <th><input type="text" id="tt" placeholder="Nhập vào đây" value=""></th>
+               <th><select name="from" id="us" >
+                   <option value="VND">Việt nam</option>
+                   <option value="USD">USD</option>
+               </select></th>
+               <th>
+                   <select name="USD" id="vn">
+                       <option value="USD">USD</option>
+                       <option value="VND">Việt Nam</option>
+                   </select>
+               </th>
+               <th><input type="button" value="Convert" id="Convert" onclick=convert()></th>
+           </tr>
+       </table>
+       <div id="out" style="color: blue"></div>
+       <input type="reset" onclick=RS()>
+   </form>
+
+
+</body>
+<script>
+   function convert() {
+       let nhapvao = document.getElementById("tt").value;
+       let US = document.getElementById("us").value;
+       let VN = document.getElementById("vn").value;
+       let KQ;
+       console.log(US)
+       console.log(VN)
+       if (US == "VND") {
+           if (VN == "USD") {
+               KQ = nhapvao / 23000;
+               document.getElementById("out").innerHTML = KQ + "VND"
+           } else {
+               document.getElementById("out").innerHTML = nhapvao + "VND"
+           }
+       } else {
+           if (VN == "VND") {
+               KQ = nhapvao * 23000
+               document.getElementById("out").innerHTML = KQ + "$"
+           } else {
+               document.getElementById("out").innerHTML= nhapvao+ "$"
+           }
+       }
+   }
+   function RS(){
+       document.getElementById("out").innerHTML=""
+   }
+
+</script>
+</html>

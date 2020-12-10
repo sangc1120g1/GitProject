@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Số Ngày Trong Tháng</title>
+</head>
+<body>
+<form style="margin: 100px; font-size: 30px">
+    <strong>Tính số ngày trong tháng</strong><br/>
+    <input type="text" value="" id="text" name="text" class="lolk" style="margin: 10px">
+    <button type="button" value="tinh" id="tinh" name="tinh" class="tinh"
+    onclick="cong()" style="margin: 10px">Tính số ngày</button>
+    <input type="reset" id="RS" name="RS" onclick="RSSnow()" style="margin: 10px">
+    <div style="color: red; font-size: 30px" id="hien" class="hien"></div>
+</form>
+     <script>
+         function cong(num){
+             let day = parseInt(document.getElementById("text").value)
+                   switch (day){
+                       case 1:
+                       case 3:
+                       case 5:
+                       case 7:
+                       case 8:
+                       case 10:
+                       case 12:
+                           document.getElementById("hien").innerHTML='Tháng ' +day+ ' có 31 ngày'
+                           break;
+                       case 2:
+                           document.getElementById("hien").innerHTML='Tháng ' +day+ ' có 28 hoặc 29 ngày'
+                           break;
+                       case 4:
+                       case 6:
+                       case 9:
+                       case 11:
+                           document.getElementById("hien").innerHTML='Tháng ' +day+ ' có 30 ngày'
+                           break;
+                           default:
+                               document.getElementById("hien").innerHTML= 'Không có tháng nào'
+                   }
+         }
+         function RSSnow(){
+             document.getElementById("hien").innerHTML=''
+         }
+     </script>
+</body>
+</html>
