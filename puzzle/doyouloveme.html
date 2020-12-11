@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do you love me</title>
+</head>
+<body>
+      <h1 style="position:absolute;left: 160px; top: 135px; font-size: 3em">Do you love me?</h1>
+      <button type="button" id="yes" name="but1" class="but1" value="Yes" onclick="clime()"
+              style="position:absolute;left: 210px; top: 230px;width: 50px; height: 40px">Yes</button>
+      <button type="button" id="no" name="no" value="No" class="No" onmouseover="notme()"
+      style="position:absolute;left: 300px; top: 230px;width: 50px;height: 40px">No</button>
+</body>
+      <script>
+          function clime(){
+              alert('Me too')
+          }
+          function notme(){
+              let x = Math.floor(Math.random()*window.innerWidth)
+              let y = Math.floor(Math.random()*window.innerHeight)
+              document.getElementById("no").style.left= x+"px"
+              document.getElementById("no").style.top = y+"px"
+          }
+      </script>
+</html>
