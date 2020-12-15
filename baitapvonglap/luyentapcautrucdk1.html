@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập luyện tập cấu trúc điều kiện 1</title>
+</head>
+<body>
+<h5>Bài 1:kiểm cha 2 số có chia hết cho nhau hay không</h5>
+<button type="button" value="clickme" id="b1" onclick="clickme()">Bài 1</button>
+<hr>
+<h5>Bài 2:xét tuổi học sinh có đủ kiểu kiện vào lớp 10 không</h5>
+<button type="button" value="bai2" id="b2" onclick="bai2()">Bài 2</button>
+<hr>
+<h5>Bài 3: xét xem số nhập vào lớp hơn hay nhỏ hơn 0</h5>
+<button type="button" value="bai3" id="b3" onclick="bai3()">Bài 3</button>
+<hr>
+<h5>Bài 4: Tìm số lớn nhất</h5>
+<button type="button" value="bai4" id="b4" onclick="bai4()">Bài 4</button>
+<hr>
+<h5>Bài 5:Xét học lực</h5>
+<button type="button" value="bai5" id="b5" onclick="bai5()">Bài 5</button>
+<hr>
+<h5>Bài 6: Tính hoa hồng</h5>
+<button type="button" value="bai6" id="b6" onclick="bai6()">Bài 6</button>
+<h5>Bài 7: Tính cước</h5>
+<button type="button" value="bai7" id="b7" onclick="bai7()">Bài 7</button>
+</body>
+</html>
+<script>
+function clickme(){
+    let a = parseFloat(prompt())
+    let b = parseFloat(prompt())
+    if (a%b==0){
+        alert(a+" chia hết cho "+b)
+    }else {
+        alert(a+" không chia hết cho "+b)
+    }
+}
+function bai2() {
+    let c = prompt()
+    if (c > 15 && c < 20) {
+        alert("đủ điều kiện vào lớp 10")
+    } else {
+        alert("không đủ điều kiện vào lớp 10")
+    }
+}
+function bai3(){
+    let d = parseFloat(prompt())
+    if (d>0){
+        alert(d+" lớn hơn 0")
+    }else {
+        alert(d+" nhỏ hơn 0")
+    }
+}
+function bai4(){
+    let a1 = parseInt(prompt())
+    let a2 = parseInt(prompt())
+    let a3 = parseInt(prompt())
+    if (a1>a2){
+        if (a2>a3){
+            alert(a1+" lớn nhất")
+        }else {
+            if (a1<a3){
+                alert(a2+" lớn nhất")
+            }else {alert(a1+" lớn nhất")}
+        }
+    }else {
+        if (a3<a2){
+            alert(a2+" lớn nhất")
+        }else {
+            alert(a3+" lớn nhất")
+        }
+    }
+}
+function bai5(){
+    let b1 = parseFloat(prompt("điểm ktra"))
+    let b2 = parseFloat(prompt("điểm thi giữa kì"))
+    let b3 = parseFloat(prompt("điểm thi cuối kì"))
+    let b4 = (b1+b2+b3)/3
+    if (b4<5){
+        alert("loai D")}
+    else {
+        if (b4<7){
+            alert("loai C")
+        }else {
+            if (b4<9){
+                alert("loai B")
+            }else {
+                if (b4<=10&&b4>9) {
+                    alert("loai A")
+                }else {
+                    alert("khong co ket qua")
+                }
+            }
+        }
+    }
+}
+function bai6(){
+    let c1 = parseFloat(prompt("Nhập vào doanh số"))
+    let c2 = c1*3/100
+    alert(c2+" VND")
+}
+function bai7(){
+    let d1 = parseFloat(prompt("nhập số cước"))
+    let d2 = d1*6000
+    alert(d2+" VND")
+}
+</script>

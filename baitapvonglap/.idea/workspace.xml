@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29cec8e8-aa30-45ab-bfb8-67f69e807b04" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/luyentapcautrucdk1.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/luyentapvonglap1.html" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1lBNtpQFsViTD2hjVqMRz5n2kN5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29cec8e8-aa30-45ab-bfb8-67f69e807b04" name="Default Changelist" comment="" />
+      <created>1607066743946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607066743946</updated>
+      <workItem from="1607066745508" duration="5612000" />
+      <workItem from="1607072836841" duration="3008000" />
+      <workItem from="1607088622649" duration="457000" />
+      <workItem from="1607091685080" duration="632000" />
+      <workItem from="1607247738964" duration="33886000" />
+      <workItem from="1607331199971" duration="450000" />
+      <workItem from="1607334092982" duration="1310000" />
+      <workItem from="1607351136597" duration="4593000" />
+      <workItem from="1607389465390" duration="24182000" />
+      <workItem from="1607433584733" duration="2560000" />
+      <workItem from="1607440513797" duration="1347000" />
+      <workItem from="1607483281115" duration="4632000" />
+      <workItem from="1607495619739" duration="14146000" />
+      <workItem from="1607529640583" duration="4324000" />
+      <workItem from="1607562321877" duration="8842000" />
+      <workItem from="1607611642591" duration="2516000" />
+      <workItem from="1607649555778" duration="10048000" />
+      <workItem from="1607668822003" duration="3316000" />
+      <workItem from="1607673699244" duration="3006000" />
+      <workItem from="1607782857832" duration="603000" />
+      <workItem from="1607783483025" duration="1436000" />
+      <workItem from="1607854054962" duration="2773000" />
+      <workItem from="1607908459894" duration="21431000" />
+      <workItem from="1607946081037" duration="8292000" />
+      <workItem from="1607954741087" duration="5974000" />
+      <workItem from="1607994114618" duration="8908000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

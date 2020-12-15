@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+<button id="b1" type="button" value="bai1" onclick="bai1()">Bài 1</button>
+<hr>
+<button id="b2" type="button" value="bai2" onclick="bai2()">Bài 2</button>
+<hr>
+<button id="b3" type="button" value="bai3" onclick="bai3()">Bài 3</button>
+<hr>
+<button id="b4" type="button" value="bai4" onclick="bai4()">Bài 4</button>
+<hr>
+<button id="b5" type="button" value="bai5" onclick="bai5()">Bài 5</button>
+<hr>
+<button id="b6" type="button" value="bai6" onclick="bai6()">Bài 6</button>
+<hr>
+<button id="b7" type="button" value="bai7" onclick="bai7()">Bài 7</button>
+<hr>
+<button id="b8" type="button" value="bai8" onclick="bai8()">Bài 8</button>
+<hr>
+<button id="b9" type="button" value="bai9" onclick="bai9()">Bài 9</button>
+</body>
+</html>
+<script>
+    function bai1(){
+        let C = parseFloat(prompt())
+        let F = C*9/5+32
+        alert(F)
+    }
+    function bai2(){
+        let m = parseFloat(prompt())
+        let ft = m*3.2808
+        alert(ft)
+    }
+    function bai3(){
+        let a = parseFloat(prompt())
+        let S = a*a
+        alert(S)
+    }
+    function bai4(){
+        let b = parseFloat(prompt())
+        let c = parseFloat(prompt())
+        let s = b*c
+        alert(s)
+    }
+    function bai5(){
+        let d = parseFloat(prompt())
+        let h = parseFloat(prompt())
+        let SS = d*h
+        alert(SS)
+    }
+    function bai6(){
+        let A = parseFloat(prompt())
+        let B = parseFloat(prompt())
+        let x = (-B)/A
+    }
+    function bai7(){
+        let a1 = parseFloat(prompt())
+        let a2 = parseFloat(prompt())
+        let a3 = parseFloat(prompt())
+        let a4 = a2*a2-4*a1*a3
+      if (a4==0){
+          alert("x1=x2="+(-a2)/2*a1)
+      }else if (a4>0){
+          alert("x1="+(-a2+a4)/2*a1)
+          alert("x2="+(-a2-a4)/2*a1)
+      }else {
+          alert("phương trình vô nghiệm")
+      }
+    }
+    function bai8(){
+        let b2 = parseInt(prompt())
+        if (b2<120 && b2>0){
+            alert("đúng")
+        }else {
+            alert("sai")
+        }
+    }
+    function bai9(){
+        let c1 = parseFloat(prompt())
+        let c2 = parseFloat(prompt())
+        let c3 = parseFloat(prompt())
+        if (c1>0 && c2>0 && c3>0 && (c1+c2)>c3 && (c1+c3)>c2 && (c3+c2)>c1){
+            alert("đúng")
+        }else {
+            alert("sai")
+        }
+    }
+
+</script>

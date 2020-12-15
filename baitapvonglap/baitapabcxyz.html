@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 1:</p>
+<button type="button" onclick="bai1()">check</button>
+<p>Bài 2:</p>
+<button type="button" onclick="bai2()">check</button>
+<p>Bài 3:</p>
+<button type="button" onclick="bai3()">check</button>
+</body>
+</html>
+<script>
+    function bai1(){
+        let a=1
+        while (a>0){
+            a++
+            if (a==105){
+                console.log(a)
+                break;
+            }
+        }
+    }
+    function bai2() {
+        let flg = false
+        let cout=0
+        let num=12
+        let tong = 0
+        while (cout<20){
+            flg = false
+            for (i=12;i<=num;i++){
+                if (num%2!=0){
+                    flg=true
+                    break;
+                }
+                if (flg==false){
+                    tong=tong+num
+                    cout++
+                    break;
+                }
+            }
+            num++
+        }
+        alert(tong)
+    }
+    function bai3() {
+        let flg = false
+        let cout=0
+        let num=5
+        let tong = 0
+        while (cout<20){
+            flg = false
+            for (i=5;i<=num;i++){
+                if (num%5!=0){
+                    flg=true
+                    break;
+                }
+                if (flg==false){
+                    tong=tong+num
+                    cout++
+                    break;
+                }
+            }
+            num++
+        }
+        alert(tong)
+    }
+</script>

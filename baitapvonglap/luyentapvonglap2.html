@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 2</title>
+</head>
+<body>
+<p>Bài 1:</p>
+<button type="button" id="b1" onclick="bai1()">check</button>
+<p>bài 2:</p>
+<button type="button" id="b2" onclick="bai2()">check</button>
+<p>Bài 3:</p>
+<button type="button" onclick="bai3()">check</button>
+<div id="b3"></div>
+<br>
+<div id="b33"></div>
+<br>
+<div id="b333"></div>
+<br id="b3333">
+<p>Bài 4:</p>
+<button type="button" onclick="bai4()">check</button>
+<p>bài 5:</p>
+<button type="button" onclick="bai5()">check</button>
+<p>Bài 6:</p>
+<button type="button" onclick="bai6()">check</button>
+<div id="b6"></div>
+</body>
+</html>
+<script>
+    function bai1() {
+        let d = parseInt(prompt())
+        let a = 0
+        let b = 1
+        let c = 2
+        for (i = 0; i < d; i++) {
+            if (i == 0) {
+                console.log(a)
+            } else if (i == 1 || i == 2) {
+                console.log(b)
+            } else {
+                a = b
+                b = c
+                c = a + b
+                console.log(c)
+            }
+        }
+    }
+    function bai2(){
+        let a = parseInt(prompt())
+        let b=1
+        for (i=1;i<=a;i++){
+            b=b*i
+        }
+        alert(b)
+    }
+    function bai3() {
+        let a = '';
+        let b= ''
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j <= i; j++) {
+                a = a + "*";
+            }
+            a = a + "<br/>";
+        }
+        document.getElementById("b3").innerHTML=a;
+        for (n=1;n<=5;n++){
+            for (k=5;k>=n;k--){
+                b=b+"*";
+            }
+            b=b+"<br/>"
+        }
+        document.getElementById("b33").innerHTML=b;
+    }
+    function bai4(){
+        let a = ''
+        let b = ''
+        for (i=1;i<=7;i++){
+            for (j=1;j<=21;j++) {
+                if ((i==2&&(j>=2&&j<=20))
+                ||(i==3&&(j>=2&&j<=20))
+                ||(i==4&&(j>=2&&j<=20))
+                    ||(i==5&&(j>=2&&j<=20))
+                    ||(i==6&&(j>=2&&j<=20))) {
+                    document.write("&nbsp"+"&nbsp")
+                }else {
+                    document.write("*")
+                }
+            }
+            document.write("<br/>")
+        }
+    }
+    function bai5(){
+        let a=parseFloat(prompt("nhập số tiền gốc"))
+        let b=parseFloat(prompt("nhập số tháng"))
+        let c = parseFloat(prompt("nhập số lãi"))
+        for (i=1;i<=b;i++){
+            a=a+((c/100)*a)
+        }
+        alert(a+"VND")
+    }
+    function bai6(){
+        let z=''
+        for (x=1;x<8;x++){
+            for (y=1;y<10;y++){
+                if (!((x==1&&(y==1||y==4||y==5||y==6||y==9||y==3||y==7))
+                    ||(x==2&&(y==1||y==5||y==9))
+                    |(x==5&&(y==1||y==9))
+                    ||(x==6&&(y<=3||y>=7))
+                    ||(x==7&&(y<=4||y>=6))
+                    ||(x==8&&(y<=4||y>=6)))){
+                    z=z+"*"
+                }else {
+                    z=z+"&nbsp"
+                }
+            }
+            z=z+"<br/>"
+        }
+       document.getElementById("b6").innerHTML=("<center>"+z+"</center>")
+    }
+</script>

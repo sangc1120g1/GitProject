@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên</title>
+</head>
+<body>
+<script>
+    let flg=true
+    let a = 0
+    let inp=parseInt(prompt())
+    let num=2
+    while (a<inp){
+        flg = true
+        for (i=2;i<num;i++){
+            if (num%i==0){
+                flg=false
+                break;
+            }
+        }
+        if (flg==true){
+            console.log(num)
+            a++
+        }
+        num++
+    }
+
+</script>
+</body>
+</html>
