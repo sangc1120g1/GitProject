@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập sử dụng mảng</title>
+</head>
+<body>
+<p>Bài 1:</p>
+<button type="button" onclick="bai1()">check</button>
+<div id="b1"></div>
+<p>Bài 2:</p>
+<button type="button" onclick="addn()">add</button>
+<button type="button" onclick="dislay()">display</button>
+<div id="b2"></div>
+<p>Bài 3:</p>
+<button type="button" onclick="bai3()">check</button>
+</body>
+</html>
+<script>
+    function bai1() {
+        let myColor = ["Red", "Green", "White", "Black"];
+        let c = ""
+        for (i = 0; i < 4; i++) {
+            let a = myColor.shift()
+            c = c + a + ","
+        }
+        document.getElementById("b1").innerHTML = c
+    }
+    let array = []
+    let newarr = []
+    let x= 0
+    function addn(){
+        let a = parseFloat(prompt())
+        array[x]=a;
+        x++;
+    }
+    function dislay(){
+        for (i=0;i<array.length;i++){
+           if (array[i]%2==0) {
+               if (array[i+1]%2==0) {
+                   newarr += array[i] + "-"
+               }
+               else {
+                   newarr += array[i]
+               }
+           }
+           else {
+               newarr += array[i]
+           }
+        }
+        document.getElementById("b2").innerHTML=newarr
+    }
+    function bai3(){
+        var str = prompt();
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        var result = [];
+
+        for(var x=0; x<str.length; x++)
+        {
+            if(UPPER.indexOf(str[x]) !== -1)
+            {
+                result.push(str[x].toLowerCase());
+            }
+            else if(LOWER.indexOf(str[x]) !== -1)
+            {
+                result.push(str[x].toUpperCase());
+            }
+            else
+            {
+                result.push(str[x]);
+            }
+        }
+        console.log(result.join(''));
+    }
+</script>
