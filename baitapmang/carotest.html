@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caro test</title>
+</head>
+<body>
+<p id="caro"></p>
+</body>
+</html>
+<script>
+    let a = document.getElementById("caro")
+let arr = []
+let cra = ""
+for (let i = 0; i < 5; i++) {
+    arr[i] = [".",".",".",".","."]}
+    for (let i = 0; i < 5; i++) {
+        cra+="<br/>"
+        for (let j = 0; j < 5; j++) {
+            cra += arr[i][j] + "&nbsp"
+        }
+    }
+    cra +="<br/><br/><input type='button' value='Change Value' onclick='clickme()'>"
+a.innerHTML=cra;
+    let cout = 0
+function clickme(){
+    let x = prompt()
+    let y = prompt()
+    cra = ""
+    if (cout%2==0){
+        arr[x][y] = "X"
+    }else {
+        arr[x][y] = "0"
+    }cout++
+    for (let i = 0; i < 5; i++) {
+        cra += "<br/>"
+        for (let j = 0; j < 5; j++) {
+            cra += arr[i][j] + "&nbsp"
+            if ((arr[i][j]=="X"&&arr[i][j+1]=="X"&&arr[i][j+2]=="X")
+            ||(arr[i][j]=="X"&&arr[i+1][j]=="X"&&arr[i+2][j]=="X")){
+                alert("you win")
+            }
+        }
+    }
+    cra += "<br/><br/><input type='button' value='Change Value' onclick='clickme()'>"
+    a.innerHTML = cra
+}
+</script>

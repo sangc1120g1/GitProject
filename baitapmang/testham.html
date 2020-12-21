@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test hàm</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function testham(num){
+        for (let i = 2; i < num; i++) {
+            if (num%i==0){
+                return ("not")
+                break;
+            }
+            else {
+                return num;
+                break;
+            }
+        }
+        return num;
+    }
+
+    alert(testham(prompt("Nhập số: ", "")))
+</script>

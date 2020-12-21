@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập từ điển</title>
+</head>
+<body>
+<button type="button" onclick="searc()">search</button>
+</body>
+</html>
+<script>
+    function searc() {
+        let arrays1 = ["cat", "dog", "monkey", "panda"]
+        let arrays2 = ["mèo", "chó", "khỉ", "gấu trúc"]
+        let a = prompt()
+        let found = false
+        for (let i = 0; i < arrays1.length; i++) {
+            if (a == arrays1[i]) {
+                alert(arrays2[i])
+                found = true
+            }
+        }
+        if (found == false) {
+            alert("không tìm thấy")
+        }
+    }
+</script>

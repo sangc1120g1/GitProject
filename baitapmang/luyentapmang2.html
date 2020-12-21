@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 2</title>
+</head>
+<body>
+<p>Bài 1:</p>
+<button type="button" onclick="bai1()">check</button>
+<p>Bài 2:</p>
+<button type="button" onclick="bai2()">check</button>
+<p>Bài 3:</p>
+<button type="button" onclick="bai3()">check</button>
+</body>
+</html>
+<script>
+    function bai1(){
+        var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+
+        for (var i in a)
+        {
+            console.log("row " + i);
+            for (var j in a[i])
+            {
+                console.log(" " + a[i][j]);
+            }
+        }
+    }
+    function bai2(){
+        let arr = []
+        for (let i = 0; i < 10; i++) {
+            let a = Math.floor(Math.random()*100)
+            arr[i] = a
+        }
+        alert("array first = "+arr.join("-"))
+        arr.reverse()
+        alert("array last = "+arr.join(":"))
+    }
+    function bai3(){
+        let arr = []
+        for (let i = 0; i < 6; i++) {
+            let a = Math.floor(Math.random()*100)
+            arr[i] = a
+        }
+        alert(arr.length)
+    }
+</script>

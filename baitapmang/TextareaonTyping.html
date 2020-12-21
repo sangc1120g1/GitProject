@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Textarea on Typing</title>
+</head>
+<body>
+<textarea type="text" id="input" onkeyup="textare()"> </textarea>
+</body>
+</html>
+<script>
+    let c = document.getElementById("input")
+    let array = ["S","á","n","g"," ","d","z"]
+    let input = ""
+    let cot = 0
+    function textare(){
+        cot++
+        c.value = ''
+        input = ""
+        for (let i = 0; i < cot; i++) {
+            input += array[i]
+            console.log(i)
+            if (i == 7) {
+                input = ''
+                cot = 0;
+            }
+        }
+        c.value = input
+
+    }
+
+</script>

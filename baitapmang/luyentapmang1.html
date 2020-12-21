@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 1</title>
+</head>
+<body>
+<p>Bài 1:</p>
+<button type="button" onclick="bai1()">check</button>
+<p>Bài 2 :</p>
+<button type="button" onclick="bai2()">check</button>
+<p>Bài 3:</p>
+<button type="button" onclick="bai3()">check</button>
+<p>Bài 4:</p>
+<button type="button" onclick="bai4()">check</button>
+<p>Bài 5:</p>
+<button type="button" onclick="bai5()">check</button>
+<p>Bài 6:</p>
+<button type="button" onclick="bai6()">check</button>
+<p>Bài 7:</p>
+<button type="button" onclick="bai7()">check</button>
+<p>Bài 8:</p>
+<button type="button" onclick="bai8()">check</button>
+<p>Bài 9:</p>
+<button type="button" onclick="bai9()">check</button>
+</body>
+</html>
+<script>
+    function bai1(){
+        let arr = []
+        for (let i = 0; i < 11; i++) {
+            let a = Math.floor(Math.random()*1000)
+            arr[i]=a
+            if (arr[i]>=10){
+                console.log(arr[i])
+            }
+        }
+    }
+    function bai2(){
+        let cotn
+        let max = 1
+        let arr = []
+        for (let i = 0; i < 11; i++) {
+            let a = Math.floor(Math.random()*1000)
+            arr[i]=a
+            if (arr[i]>max){
+                max = arr[i]
+                cotn = i
+            }
+            }
+        alert("max = "+ max+", index = "+cotn)
+    }
+    function bai3(){
+        let coutn = 0
+        let max = 0
+        let arr = []
+        let total = 0
+        for (let i = 0; i < 11; i++) {
+            let a = Math.floor(Math.random()*1000)
+            arr[i] = a
+            total+=arr[i]
+            coutn+=1
+            if (arr[i]>max){
+                max = arr[i]
+            }
+        }
+        alert("max = "+max+", average = "+(total/coutn))
+    }
+    function bai4(){
+        let arr = []
+        for (let i = 0; i < 10; i++) {
+            let a = Math.floor(Math.random()*100)
+            arr[i] = a
+        }
+        alert("array first = "+arr.join("-"))
+        arr.reverse()
+        alert("array last = "+arr.join(":"))
+    }
+    function bai5(){
+        let arr = []
+        for (let i = 0; i < 11; i++) {
+            let a = Math.floor(Math.random() * (100 - -100)) + -100;
+            if (a<0){
+                arr[i] = a
+            }
+        }
+        alert(arr)
+    }
+    function bai6(){
+        let arr = []
+        let a = parseInt(prompt())
+        for (let i = 0; i < 11; i++) {
+            let b = Math.floor(Math.random()*100)
+            arr[i]=b
+            if(a===arr[i]){
+                alert("ăn rồi")
+                break;
+            }
+        }
+        alert("array là : "+arr)
+    }
+    function bai7(){
+        let arr = []
+        let a = parseInt(prompt())
+        for (let i = 0; i < 11; i++) {
+            let b = Math.floor(Math.random() * 100)
+            arr[i] = b
+            }
+        for (let i = 0; i < arr.length; i++) {
+            if (a===arr[i]){
+                arr.slice(i,i)
+            }
+        }
+        console.log(arr)
+    }
+    function bai8(){
+        let arr = []
+        for (let i = 0; i < 10; i++) {
+            let a = Math.floor(Math.random() * 100)
+            arr[i]=a
+        }
+        arr.sort()
+        arr.reverse()
+        console.log(arr)
+    }
+    function bai9(){
+        let a = []
+        let b = []
+        for (let i = 0; i < 10; i++) {
+            let a1 = Math.floor(Math.random()*100)
+            a[i] = a1
+        }
+        for (let i = 0; i < 10; i++) {
+            let b1 = Math.floor(Math.random() * 100)
+            b[i] = b1
+        }
+        let c = a.concat(b)
+        alert("Mảng 1 = "+a)
+        alert("Mảng 2 = "+b)
+        alert("Mảng 3 = "+c)
+    }
+</script>
