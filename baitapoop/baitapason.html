@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập</title>
+</head>
+<body>
+<p>Bài 1:</p>
+<button type="button" onclick="bai1()">check</button>
+<p>Bài 2:</p>
+<button type="button" onclick="bai2()">plus</button>
+<p>Bài 3:</p>
+<button type="button" onclick="bai3()">check</button>
+<p>Bài 4:</p>
+<button type="button" onclick="bai4()">check</button>
+<p>Bài 5:</p>
+<button type="button" onclick="bai5()">check</button>
+<p>Bài 6:</p>
+<button type="button" onclick="bai6()">check</button>
+<p>Bài 7:</p>
+<button type="button" onclick="bai7()">check</button>
+<p>Bài 8:</p>
+<button type="button" onclick="bai8()">check</button>
+</body>
+<p>Bài 9:</p>
+<button type="button" onclick="bai9()">check</button>
+<p>Bài 10:</p>
+<button type="button" onclick="bai10()">check</button>
+</html>
+<script>
+   function bai1(){
+       let arr = ""
+       let a = prompt()
+       arr += a
+       alert(arr.length)
+   }
+  function bai2(){
+       let arr = []
+      let tong = 0
+      let count = 0
+      for (let i = 0; i < 5; i++) {
+          let a = parseInt(prompt("nhập vào giá trị"))
+          arr[i]=a
+          tong = tong+arr[i]
+          count++
+      }
+      alert(tong/count)
+  }
+  function bai3(){
+       let arr= []
+      for (let i = 0; i < 5; i++) {
+          let a = parseInt(prompt("nhập vào giá trị"))
+          arr[i]=a
+      }
+      let max = 0
+      for (let i = 0; i <arr.length ; i++) {
+          if (arr[i]>max){
+              max = arr[i]
+          }
+      }
+      let min = max
+      for (let i = 0; i < arr.length; i++) {
+          if (arr[i]<min){
+              min=arr[i]
+          }
+      }
+      alert("giá trị nhỏ nhất là: "+min+", giá trị lớn nhất là: "+max)
+  }
+  function bai4(){
+       function plus(a,b){
+           alert("tổng = "+(a+b))
+           alert("tích ="+a*b)
+           alert("hiệu ="+(a-b))
+           alert("thương ="+a/b)
+       }
+       let a = parseInt(prompt())
+      let b = parseInt(prompt())
+      plus(a,b)
+  }
+  function bai5(){
+       function check(num){
+           if (num===parseInt(num)){
+               return num+" là số nguyên";
+           }
+           else {
+               return "không phải số nguyên";
+           }
+       }
+       alert(check(prompt()))
+  }
+  function bai6(){
+       function messenger(mess){
+           return "Chào "+mess;
+       }
+       alert(messenger(prompt("nhập tên")))
+  }
+  function bai7(){
+       let arr = []
+      for (let i = 0; i < 5; i++) {
+          let a = parseInt(prompt("nhập vào giá trị"))
+          arr[i]=a
+      }
+      alert(arr)
+       function index(num){
+           return arr.push(num);
+       }
+      index(prompt("nhập vào giá trị cần add"))
+      alert(arr)
+  }
+  function bai8(){
+       let arr = []
+      for (let i = 0; i < 5; i++) {
+          let a = parseInt(prompt("nhập vào giá trị"))
+          arr[i] = a
+      }
+      alert(arr)
+      function index(index,num){
+          return arr.splice(index,num);
+      }
+      let a = prompt("vị trí cần xóa")
+      let b = prompt("số lượng cần xóa")
+     index(a,b)
+      alert(arr)
+  }
+  function bai9(){
+      let arr = []
+      for (let i = 0; i < 5; i++) {
+          let a = prompt("nhập vào giá trị")
+          arr[i] = a
+      }
+      console.log(arr)
+      function index(num){
+          return arr[num];
+      }
+      alert(index(prompt("nhập vị trí")))
+  }
+  function bai10(){
+      let arr = []
+      for (let i = 0; i < 5; i++) {
+          let a = prompt("nhập vào giá trị")
+          arr[i] = a
+      }
+      let num = 0
+      let x = 0
+      let ele = arr[x]
+      let flg = true
+      while (num<arr.length){
+          for (let i = 0; i < arr.length; i++) {
+              if (ele===arr[i]){
+                  flg = true
+                  num++
+              }
+          }
+          x++
+          ele++
+      }
+      alert(num)
+  }
+</script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function mobile(name){
+        this.name = name;
+        this.message = "";
+        this.saver = [];
+        this.inp = [];
+        this.setbattery = function (energy){
+            this.energy = energy
+        }
+        this.getbattery = function (){
+            return this.energy;
+        }
+        this.checkbattery = function (){
+            if (this.energy>5){
+                this.energy--;
+            }
+            else {
+                return "energy is lower"
+            }
+        }
+        this.turnon = function (){
+            this.status = true;
+        }
+        this.turnoff = function (){
+            this.status = false;
+        }
+        this.checkmoblie = function (){
+            if (this.status==true){
+                return "mobile is on";
+            }
+            else {
+                return "mobile is off";
+            }
+            this.energy--
+        }
+        this.charge = function (){
+            if (this.energy<5){
+                this.energy++
+            }
+            if (this.energy==100){
+                alert("battery is full")
+            }
+        }
+        this.unlock = function (){
+            this.status = !this.status
+            this.energy--
+        }
+        this.getmessage = function (){
+            return this.message;
+        }
+        this.setmessage = function (message){
+            this.message = message
+        }
+        this.sendmessage = function (message,mobile){
+            if (this.status||this.energy>0) {
+                mobile.setmessage(message);
+                this.energy--
+                mobile.mailbox(message)
+                this.draft(message)
+            }
+            else {
+                return "unlock your phone"
+            }
+        }
+        this.mailbox = function (message){
+            this.saver.push(message)
+        }
+        this.draft = function (message){
+            this.inp.push(message)
+        }
+        this.checkmailbox = function (){
+            if (this.status||this.energy>0) {
+                this.energy--
+                return this.saver.toString();
+            }
+            else {
+                return "unlock your phone"
+            }
+        }
+        this.checkdraft = function (){
+            if (this.status||this.energy>0){
+            this.energy--
+            return this.inp.toString();
+            }
+            else {
+                return "unlock your phone"
+            }
+        }
+    }
+    let nokia = new mobile("Nokia");
+    let iphone = new mobile("Iphone");
+    nokia.setbattery(50)
+    iphone.setbattery(80)
+    nokia.sendmessage(prompt("nhập tin nhắn"),iphone);
+    alert("tin nhắn từ nokia : "+iphone.checkmailbox())
+    console.log("tin nhắn đã gửi :"+nokia.checkdraft())
+</script>

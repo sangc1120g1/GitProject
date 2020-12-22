@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng lớp mô tả hc</title>
+</head>
+<body>
+<button type="button" onclick="check()">hình 1</button>
+<button type="button" onclick="check1()">hình 2</button>
+<canvas width="300" height="200" id="hcn" >hình chữ nhật</canvas>
+</body>
+</html>
+<script>
+   function Rectanle(w,h){
+       this.w = w;
+       this.h = h;
+       this.getwight = function (){
+           return this.w
+       }
+       this.getheight= function (){
+           return this.h
+       }
+       this.setwight = function (wight){
+           this.w = wight
+       }
+       this.perimeter = function (){
+           return (this.w+this.h)*2
+       }
+       this.acreage = function (){
+           return this.w*this.h
+       }
+       this.setheight = function (height){
+           this.h = height
+       }
+       this.canavs = function (){
+           var c = document.getElementById("hcn");
+           var ctx = c.getContext("2d")
+           ctx.fillStyle = "red"
+           ctx.fillRect(0,0,this.w,this.h)
+       }
+   }
+   function check(){
+       var c = document.getElementById("hcn");
+       var ctx = c.getContext("2d")
+       ctx.fillStyle = "white"
+       ctx.fillRect(0,0,500,500)
+       let hcn = new Rectanle(200,100);
+       alert("diện tích là "+hcn.acreage())
+       alert("chu vi là "+hcn.perimeter())
+       hcn.canavs()
+   }
+   function check1(){
+       var c = document.getElementById("hcn");
+       var ctx = c.getContext("2d")
+       ctx.fillStyle = "white"
+       ctx.fillRect(0,0,500,500)
+       let hcn = new Rectanle()
+       hcn.setwight(100)
+       hcn.setheight(200)
+       alert("diện tích là "+hcn.acreage())
+       alert("chu vi là "+hcn.perimeter())
+       hcn.canavs()
+   }
+
+</script>

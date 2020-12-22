@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xd lớp nhiệt độ</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Temperature(num){
+        this.c = num;
+        this.f = this.c*9/5+32;
+        this.k = this.c+273.15;
+        this.getc = function (){
+            return this.c
+        }
+        this.getf = function (){
+            return this.f
+        }
+        this.getk = function (){
+            return this.k
+        }
+        this.setc = function (c){
+            this.c = c
+        }
+        this.setf = function (){
+            this.f = this.c*9/5+32
+        }
+        this.setk = function (){
+            this.k = this.c + 273.15
+        }
+    }
+    let temperature = new Temperature(parseInt(prompt("nhập độ C")));
+    alert("Độ C là: "+temperature.getc())
+    alert("Độ f là: "+temperature.getf())
+    alert("Độ k là: "+temperature.getk())
+</script>

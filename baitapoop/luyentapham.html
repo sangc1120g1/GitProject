@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập hàm</title>
+</head>
+<body>
+<p>Bài 1:</p>
+<button type="button" onclick="bai1()">check</button>
+<p>Bài 2:</p>
+<button type="button" onclick="bai2()">check</button>
+<p>Bài 3:</p>
+<button type="button" onclick="bai3()">check</button>
+<p>Bài 4:</p>
+<button type="button" onclick="bai4()">check</button>
+<p>Bài 5:</p>
+<button type="button" onclick="bai5()">check</button>
+<p>Bài 6:</p>
+<button type="button" onclick="bai6()">check</button>
+<p>Bài 7:</p>
+<button type="button" onclick="bai7()">check</button>
+<p>Bài 8:</p>
+<button type="button" onclick="bai8()">check</button>
+</body>
+</html>
+<script>
+    function bai1(){
+        function area(num){
+            return num*num;
+        }
+        alert(area(prompt()))
+    }
+    function bai2(){
+        function area(num){
+            alert("diện tích là "+(num*num*3.14))
+            alert("chu vi là "+(num*2*3.14))
+        }
+        area(prompt("nhập vào R"))
+    }
+    function bai3(){
+        function area(num){
+            let a = 1
+            for (let i = 1; i <= num; i++) {
+                a = a*i
+            }
+            return a;
+        }
+        alert(area(prompt()))
+    }
+    function bai4(){
+        function check(num){
+            if (parseInt(num)){
+                return num+" là số";
+            }else {
+                return num+" không phải là số"
+            }
+        }
+        alert(check(prompt()))
+    }
+    function bai5() {
+        function check(a, b, c) {
+            let min = a
+            if (b<min){
+                min = b
+            }
+                if (c<min){
+                    min = c
+                }
+            return "giá trị nhỏ nhất là "+min;
+        }
+        alert(check(prompt(),prompt(),prompt()))
+    }
+    function bai6(){
+        function check(num){
+            if (num>0){
+                return num+" là số nguyên dương";
+            }
+            else {
+                return num+" là số nguyên âm";
+            }
+        }
+        alert(check(parseInt(prompt())))
+    }
+    function bai7(){
+        function check(a,b){
+            return b+" "+a;
+        }
+        alert(check(prompt(),prompt()))
+    }
+    function bai8(){
+        let arr = []
+        function check(num){
+            return num.reverse();
+        }
+        let ind = prompt("nhập độ dài chuỗi")
+        let b = prompt("nhập khoảng giá trị")
+        for (let i = 0; i < ind; i++) {
+            let a = Math.floor(Math.random()*b)
+            arr[i] = a
+        }
+        alert(arr)
+        alert(check(arr))
+    }
+</script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="intro">
+    <h1> Shop</h1>
+    <h2>Any phone on the planet</h2>
+</div>
+<p>Add New Product</p>
+<div class="add_product">
+    <input type="text" name="productAdd" id="productAdd" placeholder="New Product" onfocus="this.value=''">
+    <button type="button" id="addbtn" onclick="addProductToList()">Add</button>
+</div>
+<p>Display All Products</p>
+<div class="productDisplay" id="productDisplay">
+    <table class="table" rules=none>
+        <thead>
+        <tr>
+            <th colspan="2" style="text-align: left; background-color: white; width: 60px">Product Names</th>
+            <th id="productCount" colspan="2" style="background-color: white; text-align: right; font-weight:bold; color:rgb(134, 0, 0);width: 60px"></th>
+        </tr>
+        </thead>
+        <tbody id="result">
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+<script>
+    let products = [];
+    function addProductToList() {
+        let productAdd = document.getElementById("productAdd").value;
+        products.push(productAdd);
+        let count = products.length;
+        document.getElementById("productCount").innerText = `${count} products`
+        displayProduct()
+    }
+
+    function displayProduct() {
+        document.getElementById("result").innerHTML = "";
+        for (let i = 0; i < products.length; i++) {
+            document.getElementById("result").innerHTML += `
+            <tr>
+                  <td>${products[i]}</td>
+                  <td style="text-align: center;"><button type="button" class="btn edit" onclick="editProduct(${i})"">Edit</button></td>
+                  <td style="text-align: center;"><button type="button" class="btn delete"  onclick="deleteProduct(${i})">Delete</button></td>
+            </tr>
+            `
+        }
+
+    }
+
+    function editProduct(index) {
+        let productReplace = prompt("Dien ten san pham thay the");
+        products.splice(index, 1, productReplace);
+        displayProduct();
+    }
+
+    function deleteProduct(index) {
+        products.splice(index, 1);
+        displayProduct()
+    }
+</script>

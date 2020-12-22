@@ -1,0 +1,73 @@
+* {
+    font-size: 20px;
+    margin-left: 5px;
+
+}
+
+p {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.add_product {
+    margin-top: 5px;
+    background-color: rgb(230, 229, 229);
+    width: 600px;
+    height: 120px;
+    border-radius: 10px;
+
+}
+button {
+    background-color: rgb(1, 187, 1);
+    color: white;
+    height: 36px;
+    border-radius: 5px;
+}
+
+#delBtn {
+    width: 80px;
+    height: 36px;
+}
+
+#addbtn {
+    background-color: rgb(1, 187, 1);
+    color: white;
+    width: 60px;
+    height: 36px;
+    border-radius: 5px;
+}
+
+#productAdd {
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+table {
+    width: 800px;
+    padding: 10px;
+}
+td {
+    height: 30px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(240, 240, 240);
+}
+
+.intro {
+    text-align: center;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 20px;
+}
