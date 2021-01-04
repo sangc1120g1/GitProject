@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>công tắc bóng đèn</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function lamp(status){
+        this.status = status
+        this.turnon = function (){
+            this.status = true
+            if (this.status){
+                return "đèn đang bật"
+            }
+        }
+        this.turnoff = function (){
+            this.status = !this.status
+            if (this.status){
+                return "đèn đang tắt"
+            }
+        }
+        this.checklamp = function (){
+            if (this.status){
+                return "đèn bật";
+            }
+            else {
+                return "đèn tắt";
+            }
+        }
+    }
+    function switchbuttom(name,status){
+        this.name = name
+        this.status = status
+        this.turnonlamp = function (lamp){
+            return lamp.turnon();
+        }
+        this.turnofflamp = function (lamp){
+            return lamp.turnoff();
+        }
+        this.turnonsw = function (){
+            this.status = true
+            if (this.status){
+                return "công tắc đang bật"
+            }
+        }
+        this.turnoffsw = function (){
+            this.status = !this.status
+            if (this.status){
+                return "công tắc đang tắt"
+            }
+        }
+    }
+    let lamp1 = new lamp(true)
+    let Switch = new switchbuttom("Switch",true)
+    console.log(Switch.turnonlamp(lamp1))
+    console.log(Switch.turnonlamp(lamp1))
+</script>

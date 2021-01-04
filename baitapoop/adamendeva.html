@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam và eva</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function app() {
+        this.weight = 10
+        this.getweight = function () {
+            return this.weight
+        }
+    }
+    function human(name,boolean,weight1,){
+        this.name = name
+        this.gender = boolean
+        this.weight1 = weight1
+        this.humaspeak = function (message){
+            return message;
+        }
+        this.checkapp = function (app){
+            return app.weight;
+        }
+        this.eatapp = function (){
+                this.weight1+=1
+                app.weight--
+        }
+        this.getname = function (){
+            return this.name;
+        }
+        this.checkgender = function (){
+            if (this.gender==true){
+                boolean = "Nam"
+            }
+            else {
+                boolean = "Nữ"
+            }
+        }
+        this.getgender = function (){
+            return this.gender
+        }
+    }
+    var apple = new app()
+    var adam = new human("adam",true,40)
+    console.log(adam.checkapp(apple))
+    adam.eatapp()
+    console.log(adam.humaspeak("táo ngon vl"))
+    console.log(adam.weight1)
+</script>
